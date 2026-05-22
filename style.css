@@ -8,6 +8,14 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+[data-theme="dark"] {
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --text-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --primary-color: #6ab0ff;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--background-color);
@@ -17,10 +25,27 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
     text-align: center;
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#theme-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
 header h1 {
@@ -34,6 +59,7 @@ header h1 {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 20px var(--shadow-color);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .numbers-container {
